@@ -16,8 +16,8 @@ public class client {
         final Scanner scanner = new Scanner(System.in);
 
         try {
-            // Connexion au serveur sur le port 4000
-            clientSocket = new Socket("localhost", 4000);
+            // Connexion au serveur sur un port 
+            clientSocket = new Socket("localhost",51690);
             int port = clientSocket.getLocalPort();
             System.out.println(port);
 

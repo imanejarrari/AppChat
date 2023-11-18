@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class server {
     public static void main(String[] args) {
-        // Déclarations des variables
+        // Declarations des variables
         final ServerSocket serverSocket;
         final Socket clientSocket;
         final BufferedReader BR;
@@ -18,8 +18,8 @@ public class server {
         final Scanner scanner = new Scanner(System.in);
 
         try {
-            // Création du ServerSocket avec un port fixe (4000)
-            serverSocket = new ServerSocket(4000);
+            // Creation du ServerSocket avec un port
+            serverSocket = new ServerSocket(0);
             int port = serverSocket.getLocalPort();
             System.out.println(port);
 
