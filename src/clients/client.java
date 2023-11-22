@@ -17,7 +17,7 @@ public class client {
 
         try {
             // Connexion au serveur sur un port 
-            clientSocket = new Socket("localhost",51690);
+        	clientSocket = new Socket("",3500);
             int port = clientSocket.getLocalPort();
             System.out.println(port);
 
