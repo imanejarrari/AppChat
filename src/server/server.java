@@ -20,7 +20,9 @@ public class server {
 
         try {
             // Creation du ServerSocket avec un port
-        	serverSocket = new ServerSocket(0, 50, InetAddress.getByName("0.0.0.0"));            int port = serverSocket.getLocalPort();
+        	serverSocket = new ServerSocket(0, 50, InetAddress.getByName("0.0.0.0"));
+         	
+        	int port = serverSocket.getLocalPort();
             System.out.println(port);
 
             // Attente de la connexion du client
@@ -55,9 +57,10 @@ public class server {
                     try {
                         // Lire les messages du client et afficher sur le serveur
                         msg = BR.readLine();
-                        while (msg != null) {
+                        while (msg != null) {      
+                        	msg = BR.readLine();
                             System.out.println("Client : " + msg);
-                            msg = BR.readLine();
+
                         }
 
                         // Client déconnecté, fermeture des flux et sockets

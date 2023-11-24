@@ -17,7 +17,7 @@ public class client {
 
         try {
             // Connexion au serveur sur un port 
-        	clientSocket = new Socket("",3500);
+        	clientSocket = new Socket("localhost",55180);
             int port = clientSocket.getLocalPort();
             System.out.println(port);
 
@@ -50,9 +50,10 @@ public class client {
                     try {
                         // Lire les messages du serveur et afficher sur le client
                         msg = BR.readLine();
-                        while (msg != null) {
+                        while (msg != null) { 
+                        	msg = BR.readLine();
                             System.out.println("Server : " + msg);
-                            msg = BR.readLine();
+                           
                         }
 
                         // Le serveur est hors service, fermeture des flux et du socket client
