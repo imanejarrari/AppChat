@@ -18,8 +18,8 @@ public class client {
         try {
             // Connexion au serveur sur un port 
         	clientSocket = new Socket("192.168.1.124",55200);
-            int port = clientSocket.getLocalPort();
-            System.out.println(port);
+          //  int port = clientSocket.getLocalPort();
+         //   System.out.println(port);
 
             // Initialisation des flux de communication avec le serveur
             PW = new PrintWriter(clientSocket.getOutputStream());
@@ -49,10 +49,12 @@ public class client {
                 public void run() {
                     try {
                         // Lire les messages du serveur et afficher sur le client
-                        msg = BR.readLine();
-                        while (msg != null) { 
-                        	msg = BR.readLine();
-                            System.out.println("Server : " + msg);
+                       // msg = BR.readLine();
+                      //  while (msg != null) { 
+                      //  	msg = BR.readLine();
+                    	while ((msg = BR.readLine()) != null) {
+                            System.out.println("Imane : " + msg);
+
                            
                         }
 

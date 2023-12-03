@@ -19,7 +19,7 @@ public class server {
 
         try {
             // Création du ServerSocket avec un port
-            serverSocket = new ServerSocket(55202 );
+            serverSocket = new ServerSocket(55203 );
             System.out.println("waiting ...");
 
             // Attente de la connexion du client
@@ -35,7 +35,6 @@ public class server {
                 while (true) {
                     // Lire l'entrée utilisateur et envoyer au client
                     String msg = scanner.nextLine();
-                    System.out.print("Imane :");
                     PW.println(msg);
                 }
             });
