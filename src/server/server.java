@@ -19,7 +19,7 @@ public class server {
 
         try {
             // Création du ServerSocket avec un port
-            serverSocket = new ServerSocket(55200);
+            serverSocket = new ServerSocket(55202 );
             System.out.println("waiting ...");
 
             // Attente de la connexion du client
